@@ -45,7 +45,7 @@ export default function Dashboard() {
   return (
     <div style={{ maxWidth: 1200, margin: '0 auto' }}>
       <Row gutter={[16, 16]}>
-        <Col span={6}>
+        <Col xs={12} sm={12} md={6}>
           <Card hoverable onClick={() => navigate('/questions')}>
             <Statistic
               title="题库总数"
@@ -55,7 +55,7 @@ export default function Dashboard() {
             />
           </Card>
         </Col>
-        <Col span={6}>
+        <Col xs={12} sm={12} md={6}>
           <Card hoverable onClick={() => navigate('/interview')}>
             <Statistic
               title="面试次数"
@@ -65,7 +65,7 @@ export default function Dashboard() {
             />
           </Card>
         </Col>
-        <Col span={6}>
+        <Col xs={12} sm={12} md={6}>
           <Card hoverable onClick={() => navigate('/review')}>
             <Statistic
               title="待复习题目"
@@ -75,7 +75,7 @@ export default function Dashboard() {
             />
           </Card>
         </Col>
-        <Col span={6}>
+        <Col xs={12} sm={12} md={6}>
           <Card>
             <Statistic
               title="平均得分"
@@ -88,8 +88,8 @@ export default function Dashboard() {
         </Col>
       </Row>
 
-      <Row gutter={16} style={{ marginTop: 24 }}>
-        <Col span={12}>
+      <Row gutter={[16, 16]} style={{ marginTop: 24 }}>
+        <Col xs={24} sm={24} md={12}>
           <Card
             title="快速开始"
             extra={<Button type="link" onClick={() => navigate('/interview')}>查看全部</Button>}
@@ -119,7 +119,7 @@ export default function Dashboard() {
             </div>
           </Card>
         </Col>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={12}>
           <Card title="今日待复习">
             {todayReviews.length > 0 ? (
               <List
@@ -149,25 +149,25 @@ export default function Dashboard() {
 
       {activePlan && (
         <Card title={`当前计划: ${activePlan.name}`} style={{ marginTop: 16 }}>
-          <Row gutter={16}>
-            <Col span={6}>
+          <Row gutter={[16, 16]}>
+            <Col xs={12} sm={12} md={6}>
               <Statistic
                 title="目标日期"
                 value={dayjs(activePlan.targetDate).format('MM/DD')}
                 suffix={`(还有${dayjs(activePlan.targetDate).diff(dayjs(), 'day')}天)`}
               />
             </Col>
-            <Col span={6}>
+            <Col xs={12} sm={12} md={6}>
               <Statistic
                 title="任务进度"
                 value={activePlan.progress.completedTasks}
                 suffix={`/ ${activePlan.progress.totalTasks}`}
               />
             </Col>
-            <Col span={6}>
+            <Col xs={12} sm={12} md={6}>
               <Statistic title="目标岗位" value={activePlan.targetPosition} />
             </Col>
-            <Col span={6} style={{ display: 'flex', alignItems: 'center' }}>
+            <Col xs={12} sm={12} md={6} style={{ display: 'flex', alignItems: 'center' }}>
               <Button type="primary" onClick={() => navigate(`/plans/${activePlan.id}`)}>
                 查看详情
               </Button>

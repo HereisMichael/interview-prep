@@ -214,13 +214,13 @@ export default function PracticeRoom() {
     <div style={{ maxWidth: 900, margin: '0 auto' }}>
       {/* Progress Bar */}
       <Card size="small" style={{ marginBottom: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <Text strong>
             {currentIndex + 1} / {totalCount}
           </Text>
           <Progress
             percent={progress}
-            style={{ flex: 1, margin: 0 }}
+            style={{ flex: 1, minWidth: 80, margin: 0 }}
             strokeColor={progress >= 100 ? '#52c41a' : '#1677ff'}
           />
           <Space>
@@ -272,7 +272,7 @@ export default function PracticeRoom() {
               }
             }}
           />
-          <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
             <Space>
               <Button
                 onClick={handlePrev}
@@ -413,7 +413,7 @@ export default function PracticeRoom() {
             style={{ marginTop: 8 }}
           />
 
-          <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
             <Space>
               <Button
                 onClick={handlePrev}

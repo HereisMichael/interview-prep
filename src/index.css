@@ -12,3 +12,23 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* Mobile responsive overrides for Ant Design components */
+@media (max-width: 768px) {
+  .ant-table-wrapper {
+    overflow-x: auto;
+  }
+  .ant-card-body {
+    padding: 16px !important;
+  }
+  .ant-statistic-title {
+    font-size: 12px;
+  }
+  .ant-segmented {
+    width: 100%;
+  }
+  .ant-segmented-item {
+    min-width: 0;
+    padding: 0 8px;
+  }
+}

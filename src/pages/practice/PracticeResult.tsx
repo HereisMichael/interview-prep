@@ -98,8 +98,8 @@ export default function PracticeResult() {
         <Title level={3} style={{ textAlign: 'center', marginBottom: 24 }}>
           刷题完成！
         </Title>
-        <Row gutter={24}>
-          <Col span={6}>
+        <Row gutter={[16, 16]}>
+          <Col xs={12} sm={12} md={6}>
             <Statistic
               title="平均分"
               value={stats.totalScore}
@@ -113,7 +113,7 @@ export default function PracticeResult() {
               }}
             />
           </Col>
-          <Col span={6}>
+          <Col xs={12} sm={12} md={6}>
             <Statistic
               title="通过率"
               value={stats.accuracy}
@@ -121,14 +121,14 @@ export default function PracticeResult() {
               valueStyle={{ color: stats.accuracy >= 60 ? '#52c41a' : '#ff4d4f' }}
             />
           </Col>
-          <Col span={6}>
+          <Col xs={12} sm={12} md={6}>
             <Statistic
               title="通过/总题"
               value={stats.correctCount}
               suffix={`/ ${stats.totalCount}`}
             />
           </Col>
-          <Col span={6}>
+          <Col xs={12} sm={12} md={6}>
             <Statistic title="总用时" value={formatTime(totalTime)} />
           </Col>
         </Row>

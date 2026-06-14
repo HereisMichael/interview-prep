@@ -196,8 +196,8 @@ export default function PracticeConfig() {
           />
         </div>
 
-        <Row gutter={16}>
-          <Col span={12}>
+        <Row gutter={[16, 0]}>
+          <Col xs={24} sm={12}>
             <div style={{ marginBottom: 20 }}>
               <Text strong style={{ display: 'block', marginBottom: 8 }}>题目数量</Text>
               <Radio.Group
@@ -212,7 +212,7 @@ export default function PracticeConfig() {
               </Radio.Group>
             </div>
           </Col>
-          <Col span={12}>
+          <Col xs={24} sm={12}>
             <div style={{ marginBottom: 20 }}>
               <Text strong style={{ display: 'block', marginBottom: 8 }}>出题策略</Text>
               <Radio.Group
@@ -235,6 +235,8 @@ export default function PracticeConfig() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: 12,
         }}>
           <Space>
             <Text type="secondary">

@@ -157,8 +157,8 @@ export default function FlashcardRoom() {
       <div style={{ maxWidth: 700, margin: '0 auto' }}>
         <Card>
           <Title level={3} style={{ textAlign: 'center' }}>闪卡完成！</Title>
-          <Row gutter={24} style={{ marginBottom: 24 }}>
-            <Col span={8}>
+          <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
+            <Col xs={24} sm={8}>
               <Statistic
                 title="掌握"
                 value={stats.mastered}
@@ -166,7 +166,7 @@ export default function FlashcardRoom() {
                 prefix={<SmileOutlined />}
               />
             </Col>
-            <Col span={8}>
+            <Col xs={24} sm={8}>
               <Statistic
                 title="模糊"
                 value={stats.fuzzy}
@@ -174,7 +174,7 @@ export default function FlashcardRoom() {
                 prefix={<MehOutlined />}
               />
             </Col>
-            <Col span={8}>
+            <Col xs={24} sm={8}>
               <Statistic
                 title="不会"
                 value={stats.miss}
@@ -212,7 +212,7 @@ export default function FlashcardRoom() {
     <div style={{ maxWidth: 700, margin: '0 auto' }}>
       {/* Stats Bar */}
       <Card size="small" style={{ marginBottom: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
           <Space>
             <Text strong>{currentIndex + 1} / {totalCount}</Text>
             <Progress
@@ -233,7 +233,7 @@ export default function FlashcardRoom() {
       <div
         style={{
           perspective: '1000px',
-          height: 420,
+          height: 'min(420px, 60vh)',
           marginBottom: 16,
         }}
       >
